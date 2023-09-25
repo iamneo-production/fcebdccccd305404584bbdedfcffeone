@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(173, 55, 55); /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+
+
+.greeting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the container */
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #007bff; /* Blue border */
+  }
+  
+  .action-button,
+  .edit-button,
+  .save-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .action-button:hover,
+  .edit-button:hover,
+  .save-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Add a slight zoom effect */
+  }
+  
+  .save-button {
+    background-color: #28a745;
+  }
+  
+  .save-button:hover {
+    background-color: #1e7e34;
+  }
+  
+  .edit-button {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .edit-button:hover {
+    background-color: #e0a800;
+  }
+  
+  .greeting-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcc00; /* Vibrant yellow background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px; /* Add margin for separation from container */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+  }
+  
+  h1 {
+    font-size: 28px;
+  color: #333;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  }
+
+  h1::last-child {
+    margin-left: 10px; /* Add some spacing between text and emoji */
+  }
+  
+  /* Add a subtle pulsating animation to the greeting box */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .greeting-box:hover {
+    animation: pulse 2s infinite;
+  }
+  

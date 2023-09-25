@@ -1,0 +1,15 @@
+<div class="greeting-container">
+    <input type="text" [(ngModel)]="userGreeting" placeholder="Type a greeting..." />
+    <button class="action-button" (click)="displayGreeting()">Display Greeting</button>
+    <div  class="greeting-box" *ngIf="displayedGreeting">
+      <ng-container *ngIf="!editing; else editMode">
+        <h1>{{ displayedGreeting | capitalize }}😊</h1>
+        <button class="edit-button" (click)="startEditing()">Edit</button>
+      </ng-container>
+      <ng-template #editMode>
+        <input type="text" [(ngModel)]="displayedGreeting" />
+        <button class="save-button" (click)="saveEditing()">Save</button>
+      </ng-template>
+    </div>
+  </div>
+  
